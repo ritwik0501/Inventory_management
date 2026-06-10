@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 
-
+//THIS IS FOR HEALTH CHECK 
  app.get("/health",(req,res)=>{
     res.json({
         status:"ok",

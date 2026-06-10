@@ -1,6 +1,11 @@
+const mongoose = require("mongoose")
+const connectDB = require("./database/mongo.connection");
+require('dotenv').config()
+const app1 = require("./app")
 
-const app1= require("./app")
- 
-app1.listen(3000,()=>{
-    console.log("Server is started");
-})
+
+connectDB(() => {
+    app1.listen(3000, () => {
+        console.log("Server is started");
+    })
+});
