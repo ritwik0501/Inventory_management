@@ -83,8 +83,8 @@ Response:
 
 ## Project Phases
 
-- **Phase 1**: Project setup, MongoDB connection, health check -->(Working...)
-- **Phase 2**: Product CRUD
+- **Phase 1**: Project setup, MongoDB connection, health check ✅
+- **Phase 2**: Product CRUD ---> (working)
 - **Phase 3**: Supplier CRUD & relationships
 - **Phase 4**: InventoryBatch & InventoryTransaction
 - **Phase 5**: Authentication & Authorization
