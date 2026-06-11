@@ -30,8 +30,23 @@ async function createProductController(req, res) {
         })
     }
 }
-async function getProductsController(params) {
-
+async function getALlProductsController(req, res) {
+    try {
+        const responce = await prodcutService.getALlProducts();
+        res.status(200).json({
+            status: true,
+            message: "All products showed",
+            data: responce,
+            error:{}
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "unable to get all data",
+            data: {},
+            error
+        })
+    }
 }
 
-module.exports = { createProductController, getProductsController }
+module.exports = { createProductController, getALlProductsController }

@@ -22,11 +22,17 @@ async function createProduct(data) {
     }
 
 }
-async function  getProducts(params) {
-    
+async function  getALlProducts() {
+    try {
+        const responce = await ProductReposiory.findallProducts();
+        return responce;
+    } catch (error) {
+        console.error("Error to get all product-service ", error);
+        throw error;
+    }
 }
 
 module.exports= {
     createProduct,
-    getProducts
+    getALlProducts
 }
